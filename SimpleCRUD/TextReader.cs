@@ -12,23 +12,23 @@ namespace SimpleCRUD
         public string filePath { get; set; }
         public StreamReader readStream { get; set; }
 
-        public string readFirstLine()
+        public string ReadFirstLine()
         {
             string returnString = readStream.ReadLine();
             return returnString;
         }
 
-        public void addText()
+        public void AddText()
         {
             readStream = new StreamReader(filePath);
         }
 
-        public bool isEndStream()
+        public bool IsEndStream()
         {
             return readStream.EndOfStream;
         }
 
-        public void closeStream()
+        public void CloseStream()
         {
             if (readStream.BaseStream != null)
             {

@@ -34,9 +34,12 @@
             this.addButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.openButton = new System.Windows.Forms.Button();
-            this.inputTextBox = new System.Windows.Forms.TextBox();
+            this.saveButton = new System.Windows.Forms.Button();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.inputTextBox = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.editButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -76,7 +79,9 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.addButton);
             this.flowLayoutPanel1.Controls.Add(this.deleteButton);
+            this.flowLayoutPanel1.Controls.Add(this.editButton);
             this.flowLayoutPanel1.Controls.Add(this.openButton);
+            this.flowLayoutPanel1.Controls.Add(this.saveButton);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(114, 415);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -108,7 +113,7 @@
             // openButton
             // 
             this.openButton.AutoSize = true;
-            this.openButton.Location = new System.Drawing.Point(191, 3);
+            this.openButton.Location = new System.Drawing.Point(276, 3);
             this.openButton.Name = "openButton";
             this.openButton.Size = new System.Drawing.Size(91, 27);
             this.openButton.TabIndex = 2;
@@ -116,13 +121,16 @@
             this.openButton.UseVisualStyleBackColor = true;
             this.openButton.Click += new System.EventHandler(this.openButton_Click);
             // 
-            // inputTextBox
+            // saveButton
             // 
-            this.inputTextBox.Location = new System.Drawing.Point(3, 3);
-            this.inputTextBox.Name = "inputTextBox";
-            this.inputTextBox.Size = new System.Drawing.Size(443, 22);
-            this.inputTextBox.TabIndex = 2;
-            this.inputTextBox.Text = "Default Entry";
+            this.saveButton.AutoSize = true;
+            this.saveButton.Location = new System.Drawing.Point(373, 3);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(88, 27);
+            this.saveButton.TabIndex = 3;
+            this.saveButton.Text = "Save File...";
+            this.saveButton.UseVisualStyleBackColor = true;
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
             // 
             // flowLayoutPanel2
             // 
@@ -132,10 +140,29 @@
             this.flowLayoutPanel2.Size = new System.Drawing.Size(888, 163);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
+            // inputTextBox
+            // 
+            this.inputTextBox.Location = new System.Drawing.Point(3, 3);
+            this.inputTextBox.Name = "inputTextBox";
+            this.inputTextBox.Size = new System.Drawing.Size(443, 22);
+            this.inputTextBox.TabIndex = 2;
+            this.inputTextBox.Text = "Default Entry";
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             this.openFileDialog1.Title = "Select a text file";
+            // 
+            // editButton
+            // 
+            this.editButton.AutoSize = true;
+            this.editButton.Location = new System.Drawing.Point(191, 3);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(79, 27);
+            this.editButton.TabIndex = 4;
+            this.editButton.Text = "Edit Entry";
+            this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // Form1
             // 
@@ -166,6 +193,9 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox inputTextBox;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button editButton;
     }
 }
 
